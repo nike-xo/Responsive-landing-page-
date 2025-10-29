@@ -19,7 +19,7 @@ This is my **Week 2 project** for the *Frontend Training Projects* — a respons
 
 ## 🚀 Live Demo
 You can view the live site here:  
-👉 [https://nike-xo.github.io/responsive-landing-page/](https://nike-xo.github.io/responsive-landing-page/)
+👉 [https://nike-xo.github.io/responsive-landing-page/](https://nike-xo.github.io/Responsive-landing-page-/)
 
 ## 💡 Author
 **Adenike Adenugba**
