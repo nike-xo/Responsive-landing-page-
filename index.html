@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartWatch Pro X — Demo Landing</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="SmartWatch Pro X — Responsive interactive landing page demo" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <button id="theme-toggle" aria-label="Toggle theme">🌞</button>
+        <a href="#hero" class="logo">SmartWatch <span>Pro X</span></a>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="cart-button" class="cart-btn" aria-label="Open cart">
+          🛒 <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Experience the Future on Your Wrist</h1>
+        <p class="lead">The all-new SmartWatch Pro X keeps you connected, active, and in control wherever you go.</p>
+        <div class="hero-ctas">
+          <button id="buy-now" class="btn btn-primary">Buy Now</button>
+          <a href="#features" class="btn btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <!-- simple watch mockup graphic -->
+        <div class="watch-card">
+          <div class="watch-screen">20:20</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section features">
+    <div class="container">
+      <h2 class="section-title">Why Choose SmartWatch Pro X?</h2>
+      <p class="section-sub">Packed with the features you need to stay healthy, informed, and focused.</p>
+
+      <div class="features-grid">
+        <!-- Feature card template repeated -->
+        <article class="feature-card" data-id="heart-rate" data-title="Heart Rate Monitor" data-price="49">
+          <div class="icon">❤️</div>
+          <h3>Heart Rate Monitor</h3>
+          <p>Real-time heart rate tracking to help you train smarter.</p>
+          <div class="feature-footer">
+            <span class="price">$49</span>
+            <button class="btn-add" aria-label="Add Heart Rate Monitor">Add</button>
+          </div>
+        </article>
+
+        <article class="feature-card" data-id="ai-coach" data-title="AI Fitness Coach" data-price="79">
+          <div class="icon">🤖</div>
+          <h3>AI Fitness Coach</h3>
+          <p>Personalized routines and progress tracking powered by AI.</p>
+          <div class="feature-footer">
+            <span class="price">$79</span>
+            <button class="btn-add">Add</button>
+          </div>
+        </article>
+
+        <article class="feature-card" data-id="sleep-tracker" data-title="Sleep Tracker" data-price="39">
+          <div class="icon">😴</div>
+          <h3>Sleep Tracker</h3>
+          <p>Understand sleep cycles and improve recovery.</p>
+          <div class="feature-footer">
+            <span class="price">$39</span>
+            <button class="btn-add">Add</button>
+          </div>
+        </article>
+
+        <article class="feature-card" data-id="water-resistant" data-title="Water Resistant" data-price="29">
+          <div class="icon">💧</div>
+          <h3>Water Resistant</h3>
+          <p>Wear during swims and workouts without worry.</p>
+          <div class="feature-footer">
+            <span class="price">$29</span>
+            <button class="btn-add">Add</button>
+          </div>
+        </article>
+
+        <article class="feature-card" data-id="smart-notifs" data-title="Smart Notifications" data-price="19">
+          <div class="icon">🔔</div>
+          <h3>Smart Notifications</h3>
+          <p>Get the right alerts right on your wrist.</p>
+          <div class="feature-footer">
+            <span class="price">$19</span>
+            <button class="btn-add">Add</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART PANEL -->
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="close-cart" class="close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="empty">Your cart is empty — add features to get started.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total</span>
+        <span id="cart-total">$0.00</span>
+      </div>
+      <div class="cart-actions">
+        <button id="checkout-btn" class="btn btn-primary" disabled>Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <h3>Checkout Confirmation</h3>
+      <div id="modal-content">
+        <p>Thank you for choosing SmartWatch Pro X! Your fictional order has been placed successfully 🎉</p>
+      </div>
+      <div class="modal-actions">
+        <button id="modal-done" class="btn btn-primary">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-inner">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-sub">Questions or feedback? Send us a message.</p>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <label>
+          <input type="text" name="name" id="name" placeholder="Your name" required />
+        </label>
+        <label>
+          <input type="email" name="email" id="email" placeholder="Your email" required />
+        </label>
+        <label>
+          <textarea name="message" id="message" rows="5" placeholder="Your message" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <div id="form-success" class="form-success" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> SmartWatch Pro X. All rights reserved.</div>
+      <div class="social">
+        <a href="#" aria-label="Facebook">Facebook</a> |
+        <a href="#" aria-label="Twitter">Twitter</a> |
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
